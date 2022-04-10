@@ -1,9 +1,13 @@
-/** {
+/* {
     box-sizing: border-box;
   }
   body {
     margin: 0;
   }*/
+h1 {
+    color: rgb(224, 102, 45);
+    text-align: center;
+}
 .mosaic {
 	display: grid;
     justify-content: center;
@@ -56,3 +60,67 @@
     grid-column: 9 / 11;
     grid-row: 4 / 5;
 }
+.box {
+    position: relative;
+    width: 100%;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+  }
+.box:hover .overlay {
+    opacity: 0.5;
+  }
+.overlay h1 {
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+button {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
